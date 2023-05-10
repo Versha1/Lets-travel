@@ -1,0 +1,17 @@
+.carousel-item img{
+    object-fit: cover;
+    object-position: center;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.carousel-item::before{
+    content:"";
+    display: block;
+    background-image: linear-gradient(to bottom,
+    transparent, rgba(0,0,0,0.5));
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
