@@ -32,7 +32,7 @@ let callMeForm = document.querySelector('.call-me-form');
 let phoneInput = callMeForm.querySelector('input');
 callMeForm.addEventListener('submit',function(e){
   e.stopPropagation();
-  fetch('http:///callback-requests',{
+  fetch('/callback-requests',{
     method:'POST',
     headers:{
       'Content-Type':'application/json'
@@ -55,7 +55,7 @@ emailRequestForm.addEventListener('submit', function(e){
   let emailInput = document.querySelector('#email');
   let messageInput = document.querySelector('#message');
   e.preventDefault();
-  fetch('http://localho/emails',{
+  fetch('localho/emails',{
     method:'POST',
     headers:{
       'Content-Type':'application/json'

@@ -31,7 +31,7 @@
         } else {
             descriptionText = newText.substring(0, newText.indexOf('.') + 1);
         }
-        fetch('http:///posts/' + id,
+        fetch('htt/posts/' + id,
             {
                 method: 'PUT',
                 headers: {
