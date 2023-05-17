@@ -4,7 +4,9 @@ let mongoose = require('mongoose');
 
 app.use(express.json());
 //mongoose.connect("mongodb://localhost/travels");
-mongoose.connect("mongodb+srv://vversha:xjbeCN88dSqfiMrX@mycluster.1041hqk.mongodb.net/travels");
+let userName = process.env.username;
+let userPass = process.env.userpass;
+mongoose.connect(`mongodb+srv://${userName}:${userPass}@mycluster.1041hqk.mongodb.net/travels`);
 app.set('view engine', 'ejs');
 
 let postRouter = require('./routes/post.route');
