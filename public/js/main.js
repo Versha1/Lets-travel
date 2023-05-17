@@ -32,7 +32,7 @@ let callMeForm = document.querySelector('.call-me-form');
 let phoneInput = callMeForm.querySelector('input');
 callMeForm.addEventListener('submit',function(e){
   e.stopPropagation();
-  fetch('http://:3000/callback-requests',{
+  fetch('http:///callback-requests',{
     method:'POST',
     headers:{
       'Content-Type':'application/json'

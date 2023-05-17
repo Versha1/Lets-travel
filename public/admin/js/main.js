@@ -100,7 +100,7 @@ mailsBlock.addEventListener('click', function (e) {
     if (e.target.classList.contains('remove-btn')) {
         console.log("remove btn clicked")
         let id = e.target.parentNode.parentNode.querySelector('.id').value;
-        fetch('http://:3000/emails/' + id, {
+        fetch('/emails/' + id, {
             method: 'DELETE'
         }).then((response) => response.text())
             .then(() => window.history.go());

@@ -26,7 +26,7 @@ createPostForm.addEventListener('submit', function(e){
     data.append('description',descriptionText);
     data.append('imageFile',imageFile.files[0]);
     
-    fetch('http://:3000/posts',{
+    fetch('http:///posts',{
        method:'POST',
     //    headers:{
     //     'Content-Type':'application/json'

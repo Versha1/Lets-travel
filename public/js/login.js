@@ -36,7 +36,7 @@ registerForm.addEventListener('submit', function(e){
         return;
     }
 
-    fetch('http://:3000/users/register',{
+    fetch('/users/register',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

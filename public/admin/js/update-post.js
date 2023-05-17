@@ -31,7 +31,7 @@
         } else {
             descriptionText = newText.substring(0, newText.indexOf('.') + 1);
         }
-        fetch('http://:3000/posts/' + id,
+        fetch('http:///posts/' + id,
             {
                 method: 'PUT',
                 headers: {
