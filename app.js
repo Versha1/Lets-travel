@@ -3,7 +3,8 @@ let app = express();
 let mongoose = require('mongoose');
 
 app.use(express.json());
-mongoose.connect("mongodb://localhost/travels");
+//mongoose.connect("mongodb://localhost/travels");
+mongoose.connect("mongodb+srv://vversha:xjbeCN88dSqfiMrX@mycluster.1041hqk.mongodb.net/travels");
 app.set('view engine', 'ejs');
 
 let postRouter = require('./routes/post.route');
@@ -63,4 +64,6 @@ app.get('/login',(req,resp)=>{
     resp.render('login');
     }
 })
-app.listen(3000,() => console.log("Listening 3000..."))
+
+let port = process.env.PORT || 3000;
+app.listen(port,() => console.log(`Listening ${port}...`))
