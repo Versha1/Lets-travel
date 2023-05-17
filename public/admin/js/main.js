@@ -1,16 +1,16 @@
 async function getPosts() {
-    return await fetch('http://localhost:3000/posts')
+    return await fetch('/posts')
         .then((response) => response.json())
         .then((data) => data);
 }
 
 async function getCallbackRequests() {
-    return await fetch('http://localhost:3000/callback-requests')
+    return await fetch('/callback-requests')
         .then((response) => response.json())
         .then((data) => data);
 }
 async function getEmailRequests() {
-    return await fetch('http://localhost:3000/emails')
+    return await fetch('/emails')
         .then((response) => response.json())
         .then((data) => data);
 }
@@ -100,7 +100,7 @@ mailsBlock.addEventListener('click', function (e) {
     if (e.target.classList.contains('remove-btn')) {
         console.log("remove btn clicked")
         let id = e.target.parentNode.parentNode.querySelector('.id').value;
-        fetch('http://localhost:3000/emails/' + id, {
+        fetch('http://:3000/emails/' + id, {
             method: 'DELETE'
         }).then((response) => response.text())
             .then(() => window.history.go());
@@ -116,7 +116,7 @@ requestsBlock.addEventListener('click', function (e) {
     if (e.target.classList.contains('remove-btn')) {
         console.log("remove btn clicked")
         let id = e.target.parentNode.parentNode.querySelector('.id').value;
-        fetch('http://localhost:3000/callback-requests/' + id, {
+        fetch('/callback-requests/' + id, {
             method: 'DELETE'
         }).then((response) => response.text())
             .then(() => window.history.go());

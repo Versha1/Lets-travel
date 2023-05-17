@@ -1,5 +1,5 @@
 async function getPosts() {
-    return await fetch('http://localhost:3000/posts')
+    return await fetch('/posts')
         .then((response) => response.json())
         .then((data) => data);
 }
@@ -32,7 +32,7 @@ let callMeForm = document.querySelector('.call-me-form');
 let phoneInput = callMeForm.querySelector('input');
 callMeForm.addEventListener('submit',function(e){
   e.stopPropagation();
-  fetch('http://localhost:3000/callback-requests',{
+  fetch('http://:3000/callback-requests',{
     method:'POST',
     headers:{
       'Content-Type':'application/json'
@@ -55,7 +55,7 @@ emailRequestForm.addEventListener('submit', function(e){
   let emailInput = document.querySelector('#email');
   let messageInput = document.querySelector('#message');
   e.preventDefault();
-  fetch('http://localhost:3000/emails',{
+  fetch('http://localho/emails',{
     method:'POST',
     headers:{
       'Content-Type':'application/json'
